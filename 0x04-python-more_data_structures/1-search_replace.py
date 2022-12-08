@@ -2,7 +2,9 @@
 
 def search_replace(my_list, search, replace):
     if search < 0 or search > len(my_list):
-        return 'None'
+        return my_list
     new_list = my_list.copy()
-    new_list[search - 1] = replace
+    for i in range(len(my_list)):
+            if my_list[i] == search:
+                my_list[i] = replace
     return new_list
