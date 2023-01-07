@@ -8,30 +8,29 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """
         Creates a new rectangle with the given width and height.
-        
+
 
         Args:
             - width (int): The width of the rectangle. Defaults to 0.
             - height (int): The height of the rectangle. Defaults to 0.
         """
-        
+
         self.width = width
         self.height = height
-
 
     @property
     def width(self):
         """
         Gets the width of the rectangle.
         """
-        
+
         return self._width
 
     @width.setter
     def width(self, value):
         """
         Set the width of the rectangle.
-        
+
 
         Args:
             - value (int): The new width of the rrectangle.
@@ -52,7 +51,7 @@ class Rectangle:
         """
         Gets the height of the rectangle.
         """
-        
+
         return self._height
 
     @height.setter
