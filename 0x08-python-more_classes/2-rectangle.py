@@ -84,6 +84,6 @@ class Rectangle:
         Perimeter (int): (width + height) * 2
         """
         
-        if height == 0 or width == 0:
+        if self.height == 0 or self.width == 0:
             return 0
         return (self.width + self.height) * 2
