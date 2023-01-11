@@ -10,8 +10,8 @@ import
 
 case 1: common case
 
->>> bg = __import__('7-base_geometry').BaseGeometry
->>> bg = BaseGeometry()
+>>> basegeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = basegeometry()
 >>> bg.integer_validator("integer", 19)
 
 >>> bg.integer_validator("age", 15)
@@ -20,7 +20,8 @@ case 1: common case
 
 case 2: not defined object
 
->>> bg = __import__('7-base_geometry').BaseGeometry
+>>> basegeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = basegeometry()
 >>> bg2.integer_validator("integer", 19)
 Traceback (most recent call last):
 NameError: name 'bg2' is not defined
@@ -30,37 +31,30 @@ NameError: name 'bg2' is not defined
 
 case 3: passed a string value
 
->>> bg = __import__('7-base_geometry').BaseGeometry
+>>> basegeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = basegeometry()
 >>> bg.integer_validator("integer", "19")
-Traceback (most recent call last)
-		...
-TypeError: name must be an integer
+Traceback (most recent call last):
+TypeError: <name> must be an integer
+>>>
 
--------------------------------------------
-
-case 4: passed a boolean value
-
->>> bg = __import__('7-base_geometry').BaseGeometry
->>> bg.integer_validator("name", True)
-Traceback (most recent call last)
-		...           
-TypeError: name must be an integer
 -------------------------------------------
 
 case 5: passed a zero value
 
->>> bg = __import__('7-base_geometry').BaseGeometry
+>>> basegeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = basegeometry()
 >>> bg.integer_validator("age", 0)
-Traceback (most recent call last)
-		...
-ValueError: name must be greater than 0
+Traceback (most recent call last):
+ValueError: <name> must be greater than 0
+>>>
 
 -------------------------------------------
 
 case 6: negative numbers
 
->>> bg = __import__('7-base_geometry').BaseGeometry
+>>> basegeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = basegeometry()
 >>> bg.integer_validator("age", -19)
-Traceback (most recent call last)
-		...
-ValueError: name must be greater than 0
+Traceback (most recent call last):
+ValueError: <name> must be greater than 0

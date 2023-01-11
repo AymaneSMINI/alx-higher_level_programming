@@ -1,0 +1,103 @@
+Trying:
+    bg = __import__('7-base_geometry').BaseGeometry
+Expecting nothing
+ok
+Trying:
+    basegeometry = __import__('7-base_geometry').BaseGeometry
+Expecting nothing
+ok
+Trying:
+    bg = basegeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("integer", 19)
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("age", 15)
+Expecting nothing
+ok
+Trying:
+    basegeometry = __import__('7-base_geometry').BaseGeometry
+Expecting nothing
+ok
+Trying:
+    bg = basegeometry()
+Expecting nothing
+ok
+Trying:
+    bg2.integer_validator("integer", 19)
+Expecting:
+    Traceback (most recent call last):
+    NameError: name 'bg2' is not defined
+ok
+Trying:
+    basegeometry = __import__('7-base_geometry').BaseGeometry
+Expecting nothing
+ok
+Trying:
+    bg = basegeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("integer", "19")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: <name> must be an integer
+ok
+Trying:
+    basegeometry = __import__('7-base_geometry').BaseGeometry
+Expecting nothing
+ok
+Trying:
+    bg = basegeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("name", True)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: <name> must be an integer
+**********************************************************************
+File "tests/7-base_geometry.txt", line 47, in 7-base_geometry.txt
+Failed example:
+    bg.integer_validator("name", True)
+Expected:
+    Traceback (most recent call last):
+    TypeError: <name> must be an integer
+Got nothing
+Trying:
+    basegeometry = __import__('7-base_geometry').BaseGeometry
+Expecting nothing
+ok
+Trying:
+    bg = basegeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("age", 0)
+Expecting:
+    Traceback (most recent call last):
+    ValueError: <name> must be greater than 0
+ok
+Trying:
+    basegeometry = __import__('7-base_geometry').BaseGeometry
+Expecting nothing
+ok
+Trying:
+    bg = basegeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("age", -19)
+Expecting:
+    Traceback (most recent call last):
+    ValueError: <name> must be greater than 0
+ok
+**********************************************************************
+1 items had failures:
+   1 of  20 in 7-base_geometry.txt
+20 tests in 1 items.
+19 passed and 1 failed.
+***Test Failed*** 1 failures.
