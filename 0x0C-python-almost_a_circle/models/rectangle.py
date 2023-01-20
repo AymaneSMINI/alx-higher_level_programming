@@ -64,9 +64,9 @@ class Rectangle(Base):
         """set the x of the rectangle"""
         if type(value) != int:
             raise TypeError("x must be an integer")
-        if x < 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -78,6 +78,6 @@ class Rectangle(Base):
         """Sets the y of the rectangle"""
         if type(value) != int:
             raise TypeError("y must be an integer")
-        if y < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
