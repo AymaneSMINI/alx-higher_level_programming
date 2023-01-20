@@ -7,12 +7,17 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Rectangle class
         Args:
-        height (int)
-        width (int)
-        x
-        y
+            height (int) : the height of the rectangle
+            width (int) : the width of the recrangle
+            x (int) : the x coordinate of the rectangle
+            y (int): the y coordinate of the rectangle
+            id : attribute from super class Base
         Methods:
-        __init__ : constructor
+            def __init__ : constructor
+            def width :setter and getter of height
+            def setter an getter of the width
+            def setter and getter of x
+            def setter and getter of the y
         """
         super().__init__(id)
         self.width = width
@@ -33,7 +38,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
- 
+
     @property
     def height(self):
         """Gets the height of the rectangle"""
