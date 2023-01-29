@@ -1,0 +1,33 @@
+
+==========================================
+Documentation of the file 0-add_integer.py
+==========================================
+
+This module describes the integer addition function "add_integer(a, b=98)".
+
+How to use addition
+===================
+
+The add_integer function return the addition of two integer it's eqquivalent to using operator "+"
+
+::
+	>>> add_integer = __import__("0_add_integer").add_integer
+	>>> add_integer(1, 2)
+	3
+
+::
+
+	>>> add_integer(1)
+	99
+
+::
+
+	>>> add_integer(-1,5)
+	4
+
+::
+
+	>>> add_integer("break me",10)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
