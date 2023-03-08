@@ -1,0 +1,50 @@
+
+===========================================
+Documentation of the file 3-say_my_name.py
+===========================================
+
+This module describes the integer addition function "say_my_name(first_name, last_name="")".
+
+How to use say_my_name
+======================
+
+The say_my_name function print the first name and last name
+
+::
+
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+	>>> say_my_name("Aymane", "Smini")
+	My name is Aymane Smini
+
+::
+
+	>>> say_my_name("Aymane")
+	My name is Aymane 
+
+::
+
+	>>> say_my_name(12)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name("Aymane", 12)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+::
+
+	>>> say_my_name(14.4, 12)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name(14.4, "Smini")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
