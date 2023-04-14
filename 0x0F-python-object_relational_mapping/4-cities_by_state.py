@@ -13,8 +13,9 @@ if __name__ == "__main__":
             db=sys.argv[3]
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states where name LIKE Binary \
-            '{}'".format(sys.argv[4]))
+    cur.execute("SELECT cities.id, cities.name, states.name \
+    FROM cities INNER JOIN states ON states.id = cities.state_id \
+    ORDER BY cities.id")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
