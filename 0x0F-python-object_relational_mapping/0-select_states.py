@@ -13,7 +13,7 @@ if __name__ == "__main__":
             user=user,
             passwd=pw,
             db=db
-            )
+    )
     cur = conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     query_rows = cur.fetchall()
