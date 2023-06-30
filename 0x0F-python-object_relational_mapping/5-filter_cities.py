@@ -20,7 +20,9 @@ if __name__ == "__main__":
         ON cities.state_id = states.id
         WHERE states.name=%s""", (sys.argv[4], ))
     query_rows = cur.fetchall()
+    result = []
     for row in query_rows:
-        print(row)
+        result.append(row[0])
+    print(*result, sep=', ')
     cur.close()
     conn.close()
